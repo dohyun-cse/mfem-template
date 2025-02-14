@@ -16,3 +16,6 @@
 results/
 data/
 **/ParaView/
+build/
+
+compile_commands.json

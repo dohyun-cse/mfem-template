@@ -22,16 +22,14 @@ using namespace mfem;
 int main(int argc, char *argv[])
 {
    // 1. Parse command line options.
-   string mesh_file = "../data/star.mesh";
    int order = 1;
 
    OptionsParser args(argc, argv);
-   args.AddOption(&mesh_file, "-m", "--mesh", "Mesh file to use.");
    args.AddOption(&order, "-o", "--order", "Finite element polynomial degree");
    args.ParseCheck();
 
    // 2. Read the mesh from the given mesh file, and refine once uniformly.
-   Mesh mesh(mesh_file);
+   Mesh mesh = Mesh::MakeCartesian2D(2, 2, Element::QUADRILATERAL);
    mesh.UniformRefinement();
 
    // 3. Define a finite element space on the mesh. Here we use H1 continuous
