@@ -30,7 +30,10 @@ int main(int argc, char *argv[])
 
    // 2. Read the mesh from the given mesh file, and refine once uniformly.
    Mesh mesh = Mesh::MakeCartesian2D(2, 2, Element::QUADRILATERAL);
-   mesh.UniformRefinement();
+   for (int i=0; i<3; i++)
+   {
+      mesh.UniformRefinement();
+   }
 
    // 3. Define a finite element space on the mesh. Here we use H1 continuous
    //    high-order Lagrange finite elements of the given order.
