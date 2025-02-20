@@ -19,3 +19,6 @@ data/
 build/
 
 compile_commands.json
+**/*.cmake
+**/CMakeFiles/
+**/CmakeCache.txt
