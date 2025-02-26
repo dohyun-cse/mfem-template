@@ -11,6 +11,7 @@ It is also possible to use in-source build
 
 ## Change CMakeLists.txt
 
-`MyApp` -> Your application name
-`myapp` -> Your source name
+- `MyApp` -> Your application name
+
+- `myapp` -> Your source name
     
